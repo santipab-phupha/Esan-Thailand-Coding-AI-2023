@@ -226,8 +226,8 @@ if tabs == 'Drawing':
     uploaded_files = st.file_uploader(" ", 
         type=["jpg", "jpeg", "png", "dcm"], accept_multiple_files=True)    
     if uploaded_files is not None:
-        processor = AutoFeatureExtractor.from_pretrained('model_D')
-        model = SwinForImageClassification.from_pretrained('model_D')
+        processor = AutoFeatureExtractor.from_pretrained('Santipab/Esan-code-Maimeetrang-model-drawing')
+        model = SwinForImageClassification.from_pretrained('Santipab/Esan-code-Maimeetrang-model-drawing')
         answer = [] 
         for uploaded_file in uploaded_files:
             file_bytes = uploaded_file.getvalue()
@@ -311,8 +311,8 @@ if tabs == "Action":
     if __name__ == "__main__":
         main()
 
-    processor = AutoFeatureExtractor.from_pretrained('model') 
-    model = SwinForImageClassification.from_pretrained('model') 
+    processor = AutoFeatureExtractor.from_pretrained('Santipab/Esan-code-Maimeetrang-model-action-recognition') 
+    model = SwinForImageClassification.from_pretrained('Santipab/Esan-code-Maimeetrang-model-action-recognition') 
     answer = [] 
     path = r"C:\Users\santi\Desktop\PMU-Esan\imv" 
     if os.path.exists(path): 
@@ -401,5 +401,3 @@ if tabs == 'History':
 
     if __name__ == "__main__":
         main()
-
-
